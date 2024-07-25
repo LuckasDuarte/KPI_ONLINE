@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estilos específicos para as classes */
+.roboto-regular {
+    font-weight: 400;
+}
+
+.roboto-bold {
+    font-weight: 700;
+}
+
+/* Página de login */
+body {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo na horizontal */
+    align-items: center; /* Centraliza o conteúdo na vertical */
+    background-color: #E3E8E9;
+    height: 100vh; /* Para ocupar toda a altura da tela */
+    margin: 0; /* Remove margens padrão do body */
+    flex-direction: column;
+}
+
+.container-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*Centraliza os itens na vertical*/
+    width: 30%;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 2rem; /* Adiciona um espaçamento interno */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra para destacar o container */
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.img-logo {
+    width: 30%;
+    
+}
+
+/* Formulário de login */
+.login-form {
+    width: 100%; /* Para ocupar toda a largura do container */
+}
+
+.login-form p {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem; /* Espaçamento inferior entre o título e os campos */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens na horizontal */
+}
+
+.entradas {
+    width: 100%; /* Para ocupar toda a largura do container */
+    max-width: 300px; /* Define um tamanho máximo para os inputs */
+    outline: none;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.btn-entrar {
+    width: 100%;
+    max-width: 300px;
+    background: #0E86D4;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease; /* Adiciona transição suave para a mudança de cor */
+}
+
+.btn-entrar:hover {
+    background-color: #0b6aa1; /* Cor alternativa quando o cursor estiver sobre o botão */
+}
+
+footer{
+    margin-top: 1rem;
+    text-align: center; /* Centraliza o texto no rodapé */
+    margin-top: 2rem; /* Espaçamento superior */
+    font-size: 1rem; /* Tamanho da fonte do rodapé */
+}
+
+/* MEDIA MOBILE */
+@media (max-width: 768px) {
+    .container-login {
+        width: 90%; /* Reduz a largura do container */
+    }
+
+    .img-logo {
+        width: 40%; /* Faz a imagem ocupar toda a largura do container */
+    }
+
+    .btn-entrar, .entradas {
+        max-width: 80%; /* Ajusta o tamanho máximo para os inputs e botão */
+        font-size: 0.8rem;
+    }
+}
