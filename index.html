@@ -12,7 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-    <!-- JS -->
+    <!-- FIREBASE -->
+    <script type="module" src="script.js"></script>
 
     <!-- Título da página -->
     <title>KPI ONLINE - LOGIN</title>
@@ -23,11 +24,11 @@
             <img src="ASSETS/LOGO_SNA.png" alt="SNA" class="img-logo">
         </div>
         <div class="login-form">
-            <form method="post" action="PAGES/home.html">
+            <form method="post" action="">
                 <p>LOGIN</p>
-                <input type="text" placeholder="Usuário" class="entradas">
-                <input type="password" placeholder="Senha" class="entradas">
-                <button class="btn-entrar">ENTRAR</button>
+                <input type="text" placeholder="Usuário" class="entradas" id="email" autocomplete="off">
+                <input type="password" placeholder="Senha" class="entradas" id="password" autocomplete="off">
+                <button class="btn-entrar" id="btn-login">ENTRAR</button>
             </form>
         </div>
     </div>
