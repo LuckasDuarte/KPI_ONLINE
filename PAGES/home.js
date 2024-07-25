@@ -17,6 +17,9 @@ const firebaseConfig = {
   const auth=getAuth();
   const db=getFirestore();
 
+  const image = document.getElementById('img-user');
+  
+
   onAuthStateChanged(auth, (user)=>{
     const loggedInUserId=localStorage.getItem('loggedInUserId');
     if(loggedInUserId){
@@ -30,6 +33,9 @@ const firebaseConfig = {
                 document.getElementById('local-escala').innerText=userData.setor;
                 document.getElementById('patente').innerText=userData.nome_patente;
                 document.getElementById('l-pontuacao').innerText=userData.pontos;
+                
+                // foto 
+                image.src = `https://github.com/LuckasDuarte/KPI_ONLINE/blob/main/FOTOS_COLABORADORES/${nome}.jpg?raw=true`
 
             }
             else{
