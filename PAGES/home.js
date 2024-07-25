@@ -35,7 +35,7 @@ const firebaseConfig = {
                 document.getElementById('l-pontuacao').innerText=userData.pontos;
                 
                 // foto 
-                image.src = `https://github.com/LuckasDuarte/KPI_ONLINE/blob/main/FOTOS_COLABORADORES/${nome}.jpg?raw=true`
+                image.src = `https://github.com/LuckasDuarte/KPI_ONLINE/blob/main/FOTOS_COLABORADORES/${userData.nome}.jpg?raw=true`
 
             }
             else{
