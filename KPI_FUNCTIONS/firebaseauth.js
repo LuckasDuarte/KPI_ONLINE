@@ -55,7 +55,7 @@ signUp.addEventListener("click", (event)=> {
             window.location.href = "index.html"
         })
         .catch((error)=>{
-            console.error("Erro ao salvar no bando", error)
+            console.error("Erro ao salvar no banco", error)
         })
     })
     .catch((error)=>{

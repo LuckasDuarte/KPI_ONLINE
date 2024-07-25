@@ -98,11 +98,37 @@ form {
     background-color: #0b6aa1; /* Cor alternativa quando o cursor estiver sobre o botão */
 }
 
+.btn-cadastrar {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    text-decoration: none;
+    background: #0b6aa1;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease; /* Adiciona transição suave para a mudança de cor */
+}
+
+.btn-cadastrar:hover {
+    background-color: #0E86D4; /* Cor alternativa quando o cursor estiver sobre o botão */
+}
+
 footer{
     margin-top: 1rem;
     text-align: center; /* Centraliza o texto no rodapé */
     margin-top: 2rem; /* Espaçamento superior */
     font-size: 1rem; /* Tamanho da fonte do rodapé */
+}
+
+#cadastro{
+    font-size: 0.8rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
 }
 
 /* MEDIA MOBILE */
@@ -115,7 +141,7 @@ footer{
         width: 40%; /* Faz a imagem ocupar toda a largura do container */
     }
 
-    .btn-entrar, .entradas {
+    .btn-entrar, .entradas, .btn-cadastrar{
         max-width: 80%; /* Ajusta o tamanho máximo para os inputs e botão */
         font-size: 0.8rem;
     }

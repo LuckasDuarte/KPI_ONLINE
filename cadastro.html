@@ -13,10 +13,10 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
     <!-- FIREBASE -->
-    <script type="module" src="script.js"></script>
+    <script type="module" src="cadastro.js"></script>
 
     <!-- Título da página -->
-    <title>KPI ONLINE - LOGIN</title>
+    <title>KPI ONLINE - CADASTRO</title>
 </head>
 <body>
     <div class="container-login">
@@ -25,12 +25,11 @@
         </div>
         <div class="login-form">
             <form method="post" action="">
-                <p>LOGIN</p>
-                <input type="text" placeholder="Usuário" class="entradas" id="email" autocomplete="off">
+                <p>CADASTRO</p>
+                <input type="text" placeholder="Usuário" class="entradas" id="nome" autocomplete="off">
                 <input type="password" placeholder="Senha" class="entradas" id="password" autocomplete="off">
-                <button class="btn-entrar" id="btn-login">ENTRAR</button>
-                <a id="cadastro">Não tem conta? Cadastre-se aqui</a>
-                <a class="btn-cadastrar" id="btn-cadastro" href="cadastro.html">CADASTRAR</a>
+                <input type="password" placeholder="Confirme a senha" class="entradas" id="password_confirm" autocomplete="off">
+                <a class="btn-cadastrar" id="btn-cad">CADASTRAR</a>
             </form>
         </div>
     </div>
@@ -39,6 +38,6 @@
     </footer>
 
     <!-- Script -->
-    <script src="script.js"></script>
+    <script src="cadastro.js"></script>
 </body>
 </html>
