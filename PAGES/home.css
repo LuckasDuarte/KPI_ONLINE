@@ -27,3 +27,64 @@ header img{
 header p{
     font-size: 1.5rem;
 }
+
+/* PRINCIPAL */
+main{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+}
+.container-dados{
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    width: 40%;
+}
+
+.container-dados img{
+    width: 30%;
+    border-radius: 100%;
+}
+
+.dados{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    margin-bottom: 8rem;
+}
+
+#nome{
+    display: flex;
+    align-items: start;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#local-escala{
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.container-patente{
+    display: flex;
+    align-items: center;
+    margin-bottom: 8rem;
+}
+
+.container-patente p{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.container-pontos{
+    display: flex;
+    align-items: center ;
+    margin-bottom: 8rem;
+    margin-left: 12rem;
+    gap: 1rem;
+}
+
+#l-pontuacao{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
