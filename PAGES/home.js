@@ -27,8 +27,9 @@ const firebaseConfig = {
             if(docSnap.exists()){
                 const userData=docSnap.data();
                 document.getElementById('nome').innerText=userData.nome;
-                // document.getElementById('loggedUserEmail').innerText=userData.email;
-                // document.getElementById('loggedUserLName').innerText=userData.lastName;
+                document.getElementById('local-escala').innerText=userData.setor;
+                document.getElementById('patente').innerText=userData.nome_patente;
+                document.getElementById('l-pontuacao').innerText=userData.pontos;
 
             }
             else{
