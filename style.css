@@ -21,10 +21,11 @@ body {
     display: flex;
     justify-content: center; /* Centraliza o conteúdo na horizontal */
     align-items: center; /* Centraliza o conteúdo na vertical */
-    background-color: #E3E8E9;
+    background-color: #D9E4EC;
     height: 100vh; /* Para ocupar toda a altura da tela */
     margin: 0; /* Remove margens padrão do body */
     flex-direction: column;
+    overflow: hidden;
 }
 
 .container-login {
