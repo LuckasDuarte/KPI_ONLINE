@@ -27,8 +27,11 @@
             <form method="post" action="">
                 <p>CADASTRO</p>
                 <input type="text" placeholder="Usuário" class="entradas" id="nome" autocomplete="off">
-                <input type="password" placeholder="Senha" class="entradas" id="password" autocomplete="off">
-                <input type="password" placeholder="Confirme a senha" class="entradas" id="password_confirm" autocomplete="off">
+                <div class="password-container">
+                    <input type="password" placeholder="Senha" class="entradas" id="password" autocomplete="off">
+                    <a id="togglePassword">Mostrar</a>
+                </div>
+                <input type="password" placeholder="Confirme a senha" class="entradas" id="password_confirm" autocomplete="off"> 
                 <a class="btn-cadastrar" id="btn-cad">CADASTRAR</a>
             </form>
         </div>

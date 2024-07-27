@@ -57,3 +57,19 @@ document.getElementById("btn-cad").addEventListener("click", (event) => {
             console.error("Erro ao criar usuário", error);
         });
 });
+
+// VER SENHA
+const passwordInput = document.getElementById('password');
+const passwordInputConfirm = document.getElementById('password_confirm');
+const togglePasswordButton = document.getElementById('togglePassword');
+
+togglePasswordButton.addEventListener('click', function() {
+    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordInput.setAttribute('type', type);
+
+    const type_confirm = passwordInputConfirm.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordInputConfirm.setAttribute('type', type_confirm);
+
+    // Mudar o texto do botão dependendo do tipo de input
+    this.textContent = type === 'password' ? 'Mostrar' : 'Ocultar';
+});

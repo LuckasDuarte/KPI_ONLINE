@@ -26,8 +26,11 @@
         <div class="login-form">
             <form method="post" action="">
                 <p>LOGIN</p>
-                <input type="text" placeholder="Usuário" class="entradas" id="email" autocomplete="off">
-                <input type="password" placeholder="Senha" class="entradas" id="password" autocomplete="off">
+                <input type="text" placeholder="Usuário" class="entradas" id="email" autocomplete="off" required>
+                <div class="password-container">
+                    <input type="password" placeholder="Senha" class="entradas" id="password" autocomplete="off" required>
+                    <a id="togglePassword">Mostrar</a>
+                </div>
                 <button class="btn-entrar" id="btn-login">ENTRAR</button>
                 <a id="cadastro">Não tem conta? Cadastre-se aqui</a>
                 <a class="btn-cadastrar" id="btn-cadastro" href="cadastro.html">CADASTRAR</a>

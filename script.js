@@ -47,3 +47,15 @@ BtnLogin.addEventListener("click",(event) => {
     })
 })
 
+// ver a senha
+const passwordInput = document.getElementById('password');
+const togglePasswordButton = document.getElementById('togglePassword');
+
+togglePasswordButton.addEventListener('click', function() {
+    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordInput.setAttribute('type', type);
+
+    // Mudar o texto do botão dependendo do tipo de input
+    this.textContent = type === 'password' ? 'Mostrar' : 'Ocultar';
+});
+

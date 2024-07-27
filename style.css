@@ -80,6 +80,26 @@ form {
     text-align: center;
 }
 
+.password-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+#togglePassword {
+    /* position: absolute; */
+    right: 5rem;
+    padding: 8px 10px;
+    margin-bottom: 1rem;
+    margin-left: 5px;
+    border-radius: 2px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+    background-color:#0E86D4 ;
+}
+
 .btn-entrar {
     width: 100%;
     max-width: 300px;
@@ -141,8 +161,39 @@ footer{
         width: 40%; /* Faz a imagem ocupar toda a largura do container */
     }
 
+    .password-container {
+        width: 84%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-entrar, .entradas, .btn-cadastrar, .password-container{
+        max-width: 84%; /* Ajusta o tamanho máximo para os inputs e botão */
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .container-login {
+        width: 30%; /* Reduz a largura do container */
+    }
+
+    .img-logo {
+        width: 40%; /* Faz a imagem ocupar toda a largura do container */
+    }
+
+    /* .password-container {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    } */
+
     .btn-entrar, .entradas, .btn-cadastrar{
         max-width: 80%; /* Ajusta o tamanho máximo para os inputs e botão */
         font-size: 0.8rem;
     }
+
 }
+
