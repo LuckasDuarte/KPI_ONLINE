@@ -150,10 +150,18 @@ main{
     pointer-events: none;
 }
 .prox-patente-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     margin-bottom: 1rem;
 }
 .prox-patente-container p{
     font-weight: bold;
+}
+
+#img-prox-patente{
+    width: 6%;
 }
 
 /* MEDIA MOBILE */

@@ -19,6 +19,7 @@ const db = getFirestore();
 
 const image = document.getElementById('img-user');
 const image_patente = document.getElementById('img-patente');
+const image_ProxPatente = document.getElementById('img-prox-patente');
 
 var xp_inicial = 0;
 var xp_final = 0;
@@ -197,11 +198,18 @@ onAuthStateChanged(auth, (user) => {
                     progressBar.style.width = progressPercent + '%';
                     progressText.innerText = Math.round(progressPercent) + '%';
 
+                    // ------- obtendo a proxima patente
+                    const i_proximaPatente = array_patentes.indexOf(nome_patente) + 1
+                    document.getElementById('proxima-patente').innerText = array_patentes[i_proximaPatente]
+
                     // FOTO USER
                     image.src = `https://github.com/LuckasDuarte/KPI_ONLINE/blob/main/FOTOS_COLABORADORES/${userData.nome}.jpg?raw=true`;
 
                     // FOTO PATENTE
                     image_patente.src = `https://raw.githubusercontent.com/LuckasDuarte/KPI_ONLINE/main/PATENTES/${nome_patente}.bmp`;
+
+                    // FOTO PROXIMA PATENTE
+                    image_ProxPatente.src = `https://raw.githubusercontent.com/LuckasDuarte/KPI_ONLINE/main/PATENTES/${array_patentes[i_proximaPatente]}.bmp`;
 
                 } else {
                     console.log("ID DE USUÁRIO NÃO CONSTA");
