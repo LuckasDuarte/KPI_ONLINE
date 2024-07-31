@@ -176,6 +176,9 @@ main{
         height: 100%;
     }
     .container-dados img{
+        width: 40%;
+    }
+    #img-user{
         width: 50%;
     }
     .dados{
