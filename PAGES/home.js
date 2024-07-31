@@ -111,7 +111,7 @@ const firebaseConfig = {
                 image.src = `https://github.com/LuckasDuarte/KPI_ONLINE/blob/main/FOTOS_COLABORADORES/${userData.nome}.jpg?raw=true`
 
                 // FOTO PATENTE
-                image_patente.src = `https://github.com/LuckasDuarte/KPI_ONLINE/blob/main/PATENTES/${nome_patente}.jpg?raw=true`
+                image_patente.src = `https://github.com/LuckasDuarte/KPI_ONLINE/blob/main/PATENTES/${nome_patente}.bmp?raw=true`
 
             }
             else{
