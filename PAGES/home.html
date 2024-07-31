@@ -43,14 +43,15 @@
             <p id="l-pontos">PONTOS:</p>
             <p id="l-pontuacao"></p>
         </div>
-        <canvas id="myChart"></canvas>
-        
      </main>
+     <div class="plot">
+        <canvas id="myChart"></canvas>
+     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
 
-
+        
 
 
 
@@ -62,7 +63,7 @@
             data: {
                 labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
                 datasets: [{
-                    label: 'Pontuação Anual',
+                    label: 'Pontuação',
                     data: [12, 19, 3, 5, 2, 3, 5, 8, 10, 10, 11, 12],
                     backgroundColor: 'rgba(0, 48, 96, 1)',
                     borderColor: 'rgba(0, 48, 96, 1)',

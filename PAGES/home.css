@@ -94,8 +94,14 @@ main{
     font-size: 1.5rem;
 }
 
+.plot{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #myChart {
-    max-width: 80%;
+    max-width: 600px;
     width: 100%;
 }
 
