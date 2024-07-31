@@ -236,6 +236,7 @@ const updateChart = (data) => {
                 borderColor: 'rgba(0, 48, 96, 1)',
                 borderWidth: 1,
                 tension: 0.1,
+                borderWidth: 2,
             }]
         },
         options: {
