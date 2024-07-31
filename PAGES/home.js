@@ -42,7 +42,7 @@ const firebaseConfig = {
                 // controle de patentes
                 if(xp >= 45 && xp <= 74){
                     nome_patente = "RECRUTA ATARI"
-                    nome_arquivo_patente = "RECRUTA%20ATARI"
+                    // nome_arquivo_patente = "RECRUTA%20ATARI"
 
                 }else if(xp >= 75 && xp <= 104){
                     nome_patente = "SOLDADO ODYSSEY"
@@ -111,7 +111,7 @@ const firebaseConfig = {
                 image.src = `https://github.com/LuckasDuarte/KPI_ONLINE/blob/main/FOTOS_COLABORADORES/${userData.nome}.jpg?raw=true`
 
                 // FOTO PATENTE
-                image_patente.src = `https://raw.githubusercontent.com/LuckasDuarte/KPI_ONLINE/main/PATENTES/${nome_arquivo_patente}.bmp`
+                image_patente.src = `https://raw.githubusercontent.com/LuckasDuarte/KPI_ONLINE/main/PATENTES/${nome_patente}.bmp`
 
 
             }
@@ -141,5 +141,3 @@ const firebaseConfig = {
         console.error('Error Signing out:', error);
     })
   })
-
-// grafico
