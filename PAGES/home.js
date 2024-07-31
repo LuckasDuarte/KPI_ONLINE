@@ -141,3 +141,5 @@ const firebaseConfig = {
         console.error('Error Signing out:', error);
     })
   })
+
+// grafico

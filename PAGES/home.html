@@ -16,6 +16,7 @@
 
     <!-- JS -->
     <script src="home.js" type="module"></script>
+    
 
     <!-- Título da página -->
     <title>KPI ONLINE - HOME</title>
@@ -42,8 +43,41 @@
             <p id="l-pontos">PONTOS:</p>
             <p id="l-pontuacao"></p>
         </div>
+        <canvas id="myChart"></canvas>
+        
      </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+
+
+
+
+
+
+
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+                datasets: [{
+                    label: 'Pontuação Anual',
+                    data: [12, 19, 3, 5, 2, 3, 5, 8, 10, 10, 11, 12],
+                    backgroundColor: 'rgba(0, 48, 96, 1)',
+                    borderColor: 'rgba(0, 48, 96, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
     <script src="home.js" type="module"></script>
 </body>
 </html>

@@ -94,6 +94,11 @@ main{
     font-size: 1.5rem;
 }
 
+#myChart {
+    max-width: 80%;
+    width: 100%;
+}
+
 /* MEDIA MOBILE */
 @media (max-width: 600px) {
     header {
