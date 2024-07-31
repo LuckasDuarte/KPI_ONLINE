@@ -81,7 +81,7 @@ onAuthStateChanged(auth, (user) => {
                         xp_final = 184
 
                     } else if (xp >= 185 && xp <= 234) {
-                        nome_patente = "2º SARGENTO";
+                        nome_patente = "2º SARGENTO SYSTEM";
                         xp_inicial = 185
                         xp_final = 234
 
