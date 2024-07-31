@@ -18,6 +18,7 @@ const firebaseConfig = {
   const db=getFirestore();
 
   const image = document.getElementById('img-user');
+  const image_patente = document.getElementById('image_patente');
 
   
   
@@ -106,8 +107,11 @@ const firebaseConfig = {
                 }
                 document.getElementById('patente').innerText= nome_patente
 
-                // foto USER
+                // FOTO USER
                 image.src = `https://github.com/LuckasDuarte/KPI_ONLINE/blob/main/FOTOS_COLABORADORES/${userData.nome}.jpg?raw=true`
+
+                // FOTO PATENTE
+                image_patente.src = `https://github.com/LuckasDuarte/KPI_ONLINE/blob/main/PATENTES/${nome_patente}.jpg?raw=true`
 
             }
             else{
