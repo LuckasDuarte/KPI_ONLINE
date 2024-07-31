@@ -39,10 +39,16 @@ BtnLogin.addEventListener("click",(event) => {
     .catch((error)=>{
         const errorCode = error.code;
         if(errorCode == "auth/invalid-credential"){
-            alert("Erro ao entrar")
+            Toastify({
+                    text: "ERRO AO ENTRAR!",
+                    duration: 4000
+                }).showToast();
         }
         else{
-            alert("A conta não existe")
+            Toastify({
+                text: "A CONTA NÃO EXISTE!",
+                duration: 4000
+            }).showToast();
         }
     })
 })

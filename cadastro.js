@@ -15,14 +15,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 document.getElementById("btn-cad").addEventListener("click", (event) => {
-
-    // CASO AS SENHAS ESTIVEREM A MOSTRA ELE OCULTA E CRIA O USER
-    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-    passwordInput.setAttribute('type', type);
-
-    const type_confirm = passwordInputConfirm.getAttribute('type') === 'password' ? 'text' : 'password';
-    passwordInputConfirm.setAttribute('type', type_confirm);
-
     event.preventDefault();
 
     const nome = document.getElementById("nome").value;
@@ -34,8 +26,14 @@ document.getElementById("btn-cad").addEventListener("click", (event) => {
     const auth = getAuth();
     const db = getFirestore();
 
-    if (senha !== senha_confirm) {
-        alert("As senhas não conferem!");
+    if (senha != senha_confirm) {
+        Toastify({
+            text: "AS SENHAS NÃO CONFEREM!",
+            duration: 4000,
+            style: {
+                background: "linear-gradient(to right, #f00, #96c93d)",
+            },
+        }).showToast();
         return;
     }
 
@@ -62,7 +60,10 @@ document.getElementById("btn-cad").addEventListener("click", (event) => {
                 permissao: "OP",
                 xp: 0,
             };
-            alert("Conta criada")
+            Toastify({
+                text: "CONTA CRIADA!",
+                duration: 4000
+            }).showToast();
 
             const docRef = doc(db, "users", user.uid);
             setDoc(docRef, userData)
@@ -70,16 +71,25 @@ document.getElementById("btn-cad").addEventListener("click", (event) => {
                     window.location.href = "index.html";
                 })
                 .catch((error) => {
-                    console.error("Erro ao salvar no banco", error);
+                    Toastify({
+                        text: "ERRO AO SALVAR NO BANCO",
+                        duration: 4000
+                    }).showToast();
                 });
         })
         .catch((error)=>{
             const errorCode = error.code;
             if(errorCode == "auth/email-already-in-use"){
-                showMessage("Email ja em uso!","signUpMessage")
+                Toastify({
+                    text: "USUÁRIO JÁ EXISTE!",
+                    duration: 4000
+                }).showToast();
             }
             else{
-                showMessage("Erro ao criar usuário!","signUpMessage")
+                Toastify({
+                    text: "ERRO AO CRIAR USUÁRIO!",
+                    duration: 4000
+                }).showToast();
             }
         })
 });
