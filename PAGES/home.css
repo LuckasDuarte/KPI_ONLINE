@@ -229,6 +229,22 @@ main{
     }
 }
 
+@media (min-width: 760px){
+    #myChart{
+        padding: 2rem;
+    }
+}
+@media (min-width: 1024px){
+    #myChart{
+        padding: 4rem;
+    }
+}
+@media (min-width: 1400px){
+    #myChart{
+        padding: 8rem;
+    }
+}
+
 @media (max-width: 1024px) {
     main{
         flex-direction: column;
@@ -337,11 +353,7 @@ main{
         align-items: center;
         justify-content: center;
         text-align: center;
-    }
-    /* ------ GRAFICO  */
-
-
-    /* ----------- */
+    }   
     .progress-bar-wrapper{
         width: 80%;
     }
