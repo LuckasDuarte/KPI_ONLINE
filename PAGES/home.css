@@ -73,7 +73,7 @@ main{
 .container-patente{
     display: flex;
     align-items: center;
-    margin-bottom: 6rem;
+    margin-bottom: 1rem;
 }
 
 .container-patente p{
@@ -84,7 +84,7 @@ main{
 .container-pontos{
     display: flex;
     align-items: center ;
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
     margin-left: 12rem;
     gap: 1rem;
 }
@@ -103,6 +103,51 @@ main{
 #myChart {
     max-width: 600px;
     width: 100%;
+}
+
+.progress-container {
+    width: 80%;
+    max-width: 600px;
+    height: 40px; /* Ajuste a altura conforme necessário */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-bar-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.progress-bar-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000; /* Borda externa */
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #0f0;
+    border-radius: 5px;
+    transition: width 0.25s;
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+    font-weight: bold;
+    pointer-events: none;
 }
 
 /* MEDIA MOBILE */
