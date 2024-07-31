@@ -20,8 +20,6 @@ const firebaseConfig = {
   const image = document.getElementById('img-user');
   const image_patente = document.getElementById('image_patente');
 
-  
-  
 
   onAuthStateChanged(auth, (user)=>{
     const loggedInUserId=localStorage.getItem('loggedInUserId');
@@ -39,10 +37,12 @@ const firebaseConfig = {
                 const xp = userData.xp;
 
                 let nome_patente = "";
+                let nome_arquivo_patente = "";
 
                 // controle de patentes
                 if(xp >= 45 && xp <= 74){
                     nome_patente = "RECRUTA ATARI"
+                    nome_arquivo_patente = "RECRUTA%20ATARI"
 
                 }else if(xp >= 75 && xp <= 104){
                     nome_patente = "SOLDADO ODYSSEY"
@@ -111,7 +111,7 @@ const firebaseConfig = {
                 image.src = `https://github.com/LuckasDuarte/KPI_ONLINE/blob/main/FOTOS_COLABORADORES/${userData.nome}.jpg?raw=true`
 
                 // FOTO PATENTE
-                image_patente.src = `https://github.com/LuckasDuarte/KPI_ONLINE/blob/main/PATENTES/${nome_patente}.bmp?raw=true`
+                image_patente.src = `https://github.com/LuckasDuarte/KPI_ONLINE/blob/main/PATENTES/${nome_arquivo_patente}.bmp?raw=true`
 
             }
             else{
