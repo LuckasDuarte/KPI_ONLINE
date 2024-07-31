@@ -149,6 +149,12 @@ main{
     font-weight: bold;
     pointer-events: none;
 }
+.prox-patente-container{
+    margin-bottom: 1rem;
+}
+.prox-patente-container p{
+    font-weight: bold;
+}
 
 /* MEDIA MOBILE */
 @media (max-width: 600px) {

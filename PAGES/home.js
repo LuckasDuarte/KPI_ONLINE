@@ -59,6 +59,30 @@ onAuthStateChanged(auth, (user) => {
 
                     let nome_patente = "";
 
+                    let array_patentes = [
+                        "RECRUTA ATARI",
+                        "SOLDADO ODYSSEY",
+                        "CABO ARCADIA",
+                        "3º SARGENTO NES",
+                        "2º SARGENTO SYSTEM",
+                        "1º SARGENTO DYNAVISION",
+                        "SUBOFICIAL BOY",
+                        "ASPIRANTE MEGA",
+                        "2º TENENTE TURBO",
+                        "1º TENENTE NEO",
+                        "CAPITÃO SUPER",
+                        "MAJOR COMMODORE",
+                        "TENENTE CORONEL SATURN",
+                        "CORONEL PLAY",
+                        "BRIGADEIRO 64",
+                        "MAJOR BRIGADEIRO ADVANCE",
+                        "TENENTE BRIGADEIRO BOX",
+                        "MARECHAL 360",
+                        "ALMIRANTE ONE",
+                        "MESTRE SWITCH",
+                        "RAMBO PS5"
+                    ]
+
                     // controle de patentes
                     if (xp >= 45 && xp <= 74) {
                         nome_patente = "RECRUTA ATARI";
