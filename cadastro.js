@@ -15,6 +15,14 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 document.getElementById("btn-cad").addEventListener("click", (event) => {
+
+    // CASO AS SENHAS ESTIVEREM A MOSTRA ELE OCULTA E CRIA O USER
+    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordInput.setAttribute('type', type);
+
+    const type_confirm = passwordInputConfirm.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordInputConfirm.setAttribute('type', type_confirm);
+
     event.preventDefault();
 
     const nome = document.getElementById("nome").value;
@@ -22,8 +30,6 @@ document.getElementById("btn-cad").addEventListener("click", (event) => {
     const senha_confirm = document.getElementById("password_confirm").value;
 
     const nome_completo = nome + "@gmail.com"
-
-    console.log(nome, senha, senha_confirm, nome_completo)
 
     const auth = getAuth();
     const db = getFirestore();
@@ -40,7 +46,21 @@ document.getElementById("btn-cad").addEventListener("click", (event) => {
                 nome: nome,
                 nome_patente: "Recruta Atari",
                 pontos: 0,
-                setor: "ADM PROGRAMAÇÃO"
+                setor: "ADM PROGRAMAÇÃO",
+                JANEIRO: 0,
+                FEVEREIRO: 0,
+                MARCO: 0,
+                ABRIL: 0,
+                MAIO: 0,
+                JUNHO: 0,
+                JULHO: 0,
+                AGOSTO: 0,
+                SETEMBRO: 0,
+                OUTUBRO: 0,
+                NOVEMBRO: 0,
+                DEZEMBRO: 0,
+                permissao: "OP",
+                xp: 0,
             };
             alert("Conta criada")
 
@@ -53,9 +73,15 @@ document.getElementById("btn-cad").addEventListener("click", (event) => {
                     console.error("Erro ao salvar no banco", error);
                 });
         })
-        .catch((error) => {
-            console.error("Erro ao criar usuário", error);
-        });
+        .catch((error)=>{
+            const errorCode = error.code;
+            if(errorCode == "auth/email-already-in-use"){
+                showMessage("Email ja em uso!","signUpMessage")
+            }
+            else{
+                showMessage("Erro ao criar usuário!","signUpMessage")
+            }
+        })
 });
 
 // VER SENHA
